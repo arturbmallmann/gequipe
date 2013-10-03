@@ -3,6 +3,8 @@
 
     <string name="app_name">Gerência de Equipes</string>
     <string name="action_settings">Opções</string>
-    <string name="hello_world">Alterando app</string>
-
+    <string name="texto">Alterando app</string>
+	<string name="login">Login:</string>
+	<string name="senha">Senha:</string>
+	<string name="entrar">Entrar</string>
 </resources>
