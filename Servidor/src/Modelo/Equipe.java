@@ -8,19 +8,45 @@ public class Equipe {
 	ArrayList<Projeto> projetos;
 	ArrayList<Usuario> membros;
 
-	public InfoArquivo VisualizarArquivo(String nome){
-		
+	public InfoArquivo VisualizarArquivo(String nome) {
+
 		return null;
 	}
-	public boolean ModificarArquivo (InfoArquivo info){
-		
+
+	public boolean ModificarArquivo(InfoArquivo info) {
+
+		return false;
 	}
-	public boolean AtualizarTarefa(InfoTarefa info,String projeto, String tarefa){}
-	public boolean AdicionarTarefa(Tarefa tarf,String projeto){}
-	public boolean AdicionarProjeto(String nome){}
-	public boolean AdicionarMembro(String login){}
-	public boolean RemoverMembro(String login){}
-	public boolean RemoverProjeto(String nome){}
-	public boolean Desconectar(){}
-	
+
+	public boolean AtualizarTarefa(InfoTarefa info, String projeto,
+			String tarefa) {
+
+		return false;
+	}
+
+	public boolean AdicionarTarefa(Tarefa tarf, String projeto) {
+
+		return false;
+	}
+
+	public boolean AdicionarProjeto(String nome) {
+		return false;
+	}
+
+	public boolean AdicionarMembro(String login) {
+		return false;
+	}
+
+	public boolean RemoverMembro(String login) {
+		return false;
+	}
+
+	public boolean RemoverProjeto(String nome) {
+		return false;
+	}
+
+	public boolean Desconectar() {
+		return false;
+	}
+
 }
