@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Gerência de Equipes</string>
-    <string name="action_settings">Opçõeskkkkkkkkkk</string>
+    <string name="action_settings">Opções</string>
     <string name="texto">Alterando app 13:35</string>
 	<string name="login">Login:</string>
 	<string name="senha">Senha:</string>
