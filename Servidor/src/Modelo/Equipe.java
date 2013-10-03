@@ -1,6 +1,5 @@
 package Modelo;
 
-import java.awt.List;
 import java.util.ArrayList;
 
 public class Equipe {
@@ -13,7 +12,7 @@ public class Equipe {
 		return null;
 	}
 	public boolean ModificarArquivo (InfoArquivo info){
-		
+		return false;
 	}
 	public boolean AtualizarTarefa(InfoTarefa info,String projeto, String tarefa){}
 	public boolean AdicionarTarefa(Tarefa tarf,String projeto){}
