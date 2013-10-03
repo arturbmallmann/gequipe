@@ -8,10 +8,10 @@ public class Equipe {
 	ArrayList<Usuario> membros;
 
 	public InfoArquivo VisualizarArquivo(String nome) {
-
+		int var;
+		var = 1+1;
 		return null;
 	}
-<<<<<<< HEAD
 
 	public boolean ModificarArquivo(InfoArquivo info) {
 
