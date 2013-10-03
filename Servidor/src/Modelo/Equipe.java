@@ -11,11 +11,10 @@ public class Equipe {
 
 		return null;
 	}
-<<<<<<< HEAD
 
 	public boolean ModificarArquivo(InfoArquivo info) {
-
-		return false;
+		arquivos.get(0).Modificar(info);
+		return true;
 	}
 
 	public boolean AtualizarTarefa(InfoTarefa info, String projeto,
