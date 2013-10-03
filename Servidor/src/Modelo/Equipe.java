@@ -1,6 +1,5 @@
 package Modelo;
 
-import java.awt.List;
 import java.util.ArrayList;
 
 public class Equipe {
@@ -12,6 +11,7 @@ public class Equipe {
 
 		return null;
 	}
+<<<<<<< HEAD
 
 	public boolean ModificarArquivo(InfoArquivo info) {
 
