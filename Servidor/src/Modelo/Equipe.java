@@ -7,6 +7,7 @@ public class Equipe {
 	HashMap<String,Arquivo> arquivos;
 	HashMap<String,Projeto> projetos;
 	HashMap<String,Usuario> membros;
+	HashMap<Usuario,Integer> permissao;
 	public Equipe(String nome) {
 		this.nome=nome;
 		arquivos = new HashMap<String, Arquivo>();

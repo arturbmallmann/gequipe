@@ -37,4 +37,8 @@ public class Administrador extends SessaoAbstrata{
 	public void RemoverProjeto(String nome) throws Exception{
 		 equipe.RemoverMembro(nome);
 	}
+	@Override
+	public void ModificarNivel(String login,Integer nivel) throws Exception{
+		 //equipe.;
+	}
 }
