@@ -1,50 +1,61 @@
 package Modelo;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Equipe {
-	ArrayList<Arquivo> arquivos;
-	ArrayList<Projeto> projetos;
-	ArrayList<Usuario> membros;
-
+	HashMap<String,Arquivo> arquivos;
+	HashMap<String,Projeto> projetos;
+	HashMap<String,Usuario> membros;
+	public Equipe() {
+		arquivos = new HashMap<String, Arquivo>();
+		projetos = new HashMap<String, Projeto>();
+		membros = new HashMap<String, Usuario>();
+	}
 	public InfoArquivo VisualizarArquivo(String nome) {
-		return null;
+		Arquivo arq = arquivos.get(nome);
+		return arq.Visualizar();
 	}
 
-	public boolean ModificarArquivo(InfoArquivo info) {
-		arquivos.get(0).Modificar(info);
-		return true;
+	public void ModificarArquivo(InfoArquivo info) {
+		Arquivo arq = arquivos.get(info.getNome());
+		arq.Modificar(info);
 	}
 
-	public boolean AtualizarTarefa(InfoTarefa info, String projeto,
-			String tarefa) {
-
-		return false;
+	public void AtualizarTarefa(InfoTarefa info, String projeto) {
+		Projeto proj = projetos.get(projeto);
+		proj.atualizarTarefa(info, info.getTitulo());
 	}
 
-	public boolean AdicionarTarefa(Tarefa tarf, String projeto) {
-
-		return false;
+	public void AdicionarTarefa(InfoTarefa info, String projeto) {
+		Projeto proj = projetos.get(projeto);
+		proj.adicionarTarefa(info);
 	}
 
-	public boolean AdicionarProjeto(String nome) {
-		return false;
+	public void AdicionarProjeto(String nome)throws Exception {
+		if(!projetos.containsKey(nome))
+			projetos.put(nome, new Projeto());
+		else
+			throw new Exception("projeto já existe");
 	}
 
-	public boolean AdicionarMembro(String login) {
-		return false;
+	public void AdicionarMembro(String login) throws Exception {
+		if(!membros.containsKey(login))
+			projetos.put(login, new Projeto());
+		else
+			throw new Exception("Usuário já esta cadastrado");
 	}
 
-	public boolean RemoverMembro(String login) {
-		return false;
+	public void RemoverMembro(String login) {
+		
 	}
 
-	public boolean RemoverProjeto(String nome) {
-		return false;
+	public void RemoverProjeto(String nome) {
+		
 	}
 
-	public boolean Desconectar() {
-		return false;
+	public void Desconectar() {
+		
 	}
 
 }

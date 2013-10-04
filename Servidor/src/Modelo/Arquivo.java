@@ -1,14 +1,14 @@
 package Modelo;
 
 public class Arquivo {
-	private InfoArquivo informacao;
-	public Arquivo() {
-		// TODO Auto-generated constructor stub
+	private InfoArquivo info;
+	public Arquivo(InfoArquivo info) {
+		this.info=info;
 	}
 	public void Modificar(InfoArquivo info){
-		informacao = info;
+		this.info = info;
 	}
 	public InfoArquivo Visualizar(){
-		return informacao;
+		return this.info;
 	}
 }
