@@ -1,22 +1,26 @@
 package Modelo.sessao;
 
+import Modelo.Equipe;
+import Modelo.InfoArquivo;
+import Modelo.InfoTarefa;
 import Modelo.Tarefa;
 
 public class Normal extends SessaoAbstrata{
-	public boolean AdicionarTarefa(Tarefa tarf,String projeto){
-		return false;
+	protected Equipe equipe;
+	@Override
+	public InfoArquivo VisualizarArquivo(String nome)throws Exception{
+		return equipe.VisualizarArquivo(nome);
 	}
-	public boolean AdicionarProjeto(String nome){
-		return false;
+	@Override
+	public void ModificarArquivo (InfoArquivo info)throws Exception{
+		equipe.ModificarArquivo(info);
 	}
-	public boolean AdicionarMembro(String login){
-		return false;
+	@Override
+	public void AtualizarTarefa(InfoTarefa info,String projeto, String tarefa)throws Exception{
+		equipe.AtualizarTarefa(info, projeto, tarefa);
 	}
-	public boolean RemoverMembro(String login){
-		return false;
+	@Override
+	public void Desconectar()throws Exception{
+		equipe.Desconectar();
 	}
-	public boolean RemoverProjeto(String nome){
-		return false;
-	}
-
 }

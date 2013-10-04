@@ -5,13 +5,13 @@ import Modelo.InfoTarefa;
 import Modelo.Tarefa;
 
 public interface ISessaoEquipe {
-	public InfoArquivo VisualizarArquivo(String nome);
-	public boolean ModificarArquivo (InfoArquivo info);
-	public boolean AtualizarTarefa(InfoTarefa info,String projeto, String tarefa);
-	public boolean AdicionarTarefa(Tarefa tarf,String projeto);
-	public boolean AdicionarProjeto(String nome);
-	public boolean AdicionarMembro(String login);
-	public boolean RemoverMembro(String login);
-	public boolean RemoverProjeto(String nome);
-	public boolean Desconectar();
+	public InfoArquivo VisualizarArquivo(String nome) throws Exception;
+	public void ModificarArquivo (InfoArquivo info)throws Exception;
+	public void AtualizarTarefa(InfoTarefa info,String projeto, String tarefa)throws Exception;
+	public void AdicionarTarefa(Tarefa tarf,String projeto)throws Exception;
+	public void AdicionarProjeto(String nome)throws Exception;
+	public void AdicionarMembro(String login)throws Exception;
+	public void RemoverMembro(String login)throws Exception;
+	public void RemoverProjeto(String nome)throws Exception;
+	public void Desconectar()throws Exception;
 }
