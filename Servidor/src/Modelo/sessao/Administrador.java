@@ -5,6 +5,7 @@ import Modelo.InfoTarefa;
 import Modelo.Usuario;
 
 public class Administrador extends SessaoAbstrata{
+	
 	public InfoArquivo VisualizarArquivo(String nome){
 		 return equipe.VisualizarArquivo(nome);
 	}
