@@ -28,4 +28,7 @@ public abstract class SessaoAbstrata implements ISessaoEquipe{
 	public void RemoverProjeto(String nome)throws Exception{
 		throw new Exception("funcao nao implementada");
 	}
+	public void ModificarNivel(String login,Integer nivel) throws Exception{
+		throw new Exception("funcao nao implementada");
+	}
 }

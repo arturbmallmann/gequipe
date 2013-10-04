@@ -13,4 +13,5 @@ public interface ISessaoEquipe {
 	public void AdicionarMembro(Usuario usuario)throws Exception;
 	public void RemoverMembro(String login)throws Exception;
 	public void RemoverProjeto(String nome)throws Exception;
+	public void ModificarNivel(String login,Integer nivel)throws Exception;
 }
