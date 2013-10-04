@@ -5,13 +5,21 @@ import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+
 import org.json.JSONObject;
 
 
 public class Servidor {
 	
-	private Map<String, String> contas;
+	private Map<String, String> contas;	
 
+	/**
+	 *	Comentario para metodos e constantes IMPORTANTE
+	 *	constante exception com valor da chave que o template vai receber 
+	 */
+
+	private final String cathException = "cathException";
+	
 	public Servidor(){
 		ServerSocket server;
 		contas = new HashMap<>();
@@ -41,12 +49,13 @@ public class Servidor {
 		public void run() {
 			try{
 				String texto;
-				JSONObject obj, ret;
+				JSONObject obj, ret, cathExeption = null;
 				while((texto = leitor.nextLine()) != null){
 					try {
 						obj = new JSONObject(texto);
 						ret = new JSONObject();
 							ret.put("message", "Erro: Operacao nao reconhecida!");
+							cathExeption.put(cathException, false);
 						
 						if(texto.contains("\"login\":") && texto.contains("\"senha\":")){
 							String login = wrap(obj.get("login").toString());
@@ -63,7 +72,17 @@ public class Servidor {
 						}
 						p.println(ret.toString());
 						p.flush();
-					} catch(Exception e){e.printStackTrace();}
+					}
+					catch(Exception e)
+					{	
+
+						/*
+						 * Comentar o codigo é sempre util e bom .
+						 * Linha abaixo manda exception caso tive 
+						 */
+
+						cathExeption.put( "cathException", e.toString() );
+					}
 				}
 			}catch(Exception e){}
 		}
