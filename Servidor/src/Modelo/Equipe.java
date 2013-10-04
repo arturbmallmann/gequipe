@@ -1,13 +1,14 @@
 package Modelo;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Equipe {
+	private String nome;
 	HashMap<String,Arquivo> arquivos;
 	HashMap<String,Projeto> projetos;
 	HashMap<String,Usuario> membros;
-	public Equipe() {
+	public Equipe(String nome) {
+		this.nome=nome;
 		arquivos = new HashMap<String, Arquivo>();
 		projetos = new HashMap<String, Projeto>();
 		membros = new HashMap<String, Usuario>();
@@ -39,23 +40,29 @@ public class Equipe {
 			throw new Exception("projeto já existe");
 	}
 
-	public void AdicionarMembro(String login) throws Exception {
-		if(!membros.containsKey(login))
-			projetos.put(login, new Projeto());
+	public void AdicionarMembro(Usuario usuario) throws Exception {
+		if(!membros.containsKey(usuario.getLogin()))
+			membros.put(usuario.getLogin(), usuario);
 		else
 			throw new Exception("Usuário já esta cadastrado");
 	}
 
-	public void RemoverMembro(String login) {
-		
+	public void RemoverMembro(String login) throws Exception {
+		if(membros.containsKey(login))
+			membros.remove(login);
+		else
+			throw new Exception("Usuário não existente");
 	}
 
-	public void RemoverProjeto(String nome) {
-		
+	public void RemoverProjeto(String nome)throws Exception  {
+		if(projetos.containsKey(nome))
+			projetos.remove(nome);
+		else
+			throw new Exception("projeto não existe");		
 	}
-
-	public void Desconectar() {
-		
+	
+	public String getNome() {
+		return nome;
 	}
 
 }

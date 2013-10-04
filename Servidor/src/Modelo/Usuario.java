@@ -5,7 +5,18 @@ public class Usuario {
 	private String senha;
 	private String login;
 	
-	public boolean conferirSenha(){
-		return false;
+	public Usuario(String login,String senha,String nome) {
+		this.nome=nome;
+		this.senha=senha;
+		this.login=login;
+	}
+	public String getLogin() {
+		return login;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public boolean conferirSenha(String senha){
+		return this.senha==senha;
 	}
 }

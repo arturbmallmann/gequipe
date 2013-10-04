@@ -10,19 +10,16 @@ public abstract class SessaoAbstrata implements ISessaoEquipe{
 	public void ModificarArquivo (InfoArquivo info)throws Exception{
 		throw new Exception("funcao nao implementada");
 	}
-	public void AtualizarTarefa(InfoTarefa info,String projeto, String tarefa)throws Exception{
+	public void AtualizarTarefa(InfoTarefa info,String projeto)throws Exception{
 		throw new Exception("funcao nao implementada");
 	}
-	public void Desconectar()throws Exception{
-		throw new Exception("funcao nao implementada");
-	}
-	public void AdicionarTarefa(Tarefa tarf,String projeto)throws Exception{
+	public void AdicionarTarefa(InfoTarefa tarf,String projeto)throws Exception{
 		throw new Exception("funcao nao implementada");
 	}
 	public void AdicionarProjeto(String nome)throws Exception{
 		throw new Exception("funcao nao implementada");
 	}
-	public void AdicionarMembro(String login)throws Exception{
+	public void AdicionarMembro(Usuario usuario)throws Exception{
 		throw new Exception("funcao nao implementada");
 	}
 	public void RemoverMembro(String login)throws Exception{

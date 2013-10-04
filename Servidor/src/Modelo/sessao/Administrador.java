@@ -1,9 +1,8 @@
 package Modelo.sessao;
 
-import Modelo.Equipe;
 import Modelo.InfoArquivo;
 import Modelo.InfoTarefa;
-import Modelo.Tarefa;
+import Modelo.Usuario;
 
 public class Administrador extends SessaoAbstrata{
 	public InfoArquivo VisualizarArquivo(String nome){
@@ -14,31 +13,27 @@ public class Administrador extends SessaoAbstrata{
 		 equipe.ModificarArquivo(info);
 	}
 	@Override
-	public void AtualizarTarefa(InfoTarefa info,String projeto, String tarefa){
-		 equipe.AtualizarTarefa(info, projeto, tarefa);
+	public void AtualizarTarefa(InfoTarefa info,String projeto) throws Exception{
+		 equipe.AtualizarTarefa(info, projeto);
 	}
 	@Override
-	public void Desconectar(){
-		 equipe.Desconectar();
+	public void AdicionarTarefa(InfoTarefa info,String projeto) throws Exception{
+		 equipe.AdicionarTarefa(info, projeto);
 	}
 	@Override
-	public void AdicionarTarefa(Tarefa tarf,String projeto){
-		 equipe.AdicionarTarefa(tarf, projeto);
-	}
-	@Override
-	public void AdicionarProjeto(String nome){
+	public void AdicionarProjeto(String nome) throws Exception{
 		 equipe.AdicionarProjeto(nome);
 	}
 	@Override
-	public void AdicionarMembro(String login){
-		 equipe.AdicionarMembro(login);
+	public void AdicionarMembro(Usuario usuario) throws Exception{
+		 equipe.AdicionarMembro(usuario);
 	}
 	@Override
-	public void RemoverMembro(String login){
+	public void RemoverMembro(String login) throws Exception{
 		 equipe.RemoverMembro(login);
 	}
 	@Override
-	public void RemoverProjeto(String nome){
+	public void RemoverProjeto(String nome) throws Exception{
 		 equipe.RemoverMembro(nome);
 	}
 }

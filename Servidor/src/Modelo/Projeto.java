@@ -12,4 +12,7 @@ public class Projeto {
 		Tarefa temp = tarefas.get(titulo);
 		temp.atualizar(info);
 	}
+	public String getNome() {
+		return nome;
+	}
 }
