@@ -14,13 +14,25 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.appandroid.MainActivity"
+            android:name="com.example.appandroid.Principal_activity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.appandroid.MinhaActivit"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.appandroid.AdicionarTarefa_activity"
+            android:label="@string/title_activity_adicionar_tarefa_activity" >
+        </activity>
+        <activity
+            android:name="com.example.appandroid.AdicionarTarefa_acitivity"
+            android:label="@string/title_activity_adicionar_tarefa" >
         </activity>
     </application>
 
