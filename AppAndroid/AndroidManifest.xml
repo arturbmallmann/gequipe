@@ -34,6 +34,30 @@
             android:name="com.example.appandroid.AdicionarTarefa_acitivity"
             android:label="@string/title_activity_adicionar_tarefa" >
         </activity>
+        <activity
+            android:name="com.example.appandroid.VisualizarEquipe_activity"
+            android:label="@string/title_activity_visualizar_equipe_activity" >
+        </activity>
+        <activity
+            android:name="com.example.appandroid.AdicionarProjeto_activity"
+            android:label="@string/title_activity_adicionar_projeto_activity" >
+        </activity>
+        <activity
+            android:name="com.example.appandroid.RemoverProjeto_activity"
+            android:label="@string/title_activity_remover_projeto_activity" >
+        </activity>
+        <activity
+            android:name="com.example.appandroid.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="com.example.appandroid.AtualizarTarefa_activity"
+            android:label="@string/title_activity_atualizar_tarefa_activity" >
+        </activity>
+        <activity
+            android:name="com.example.appandroid.AdicionarMembro_activity"
+            android:label="@string/title_activity_adicionar_membro_activity" >
+        </activity>
     </application>
 
 </manifest>

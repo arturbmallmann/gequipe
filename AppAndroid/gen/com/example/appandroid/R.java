@@ -25,25 +25,39 @@ public final class R {
     }
     public static final class id {
         public static final int Titulo=0x7f080000;
-        public static final int action_settings=0x7f080008;
-        public static final int btAdicionarMembroEquipe=0x7f080003;
-        public static final int btAdicionarProjeto=0x7f080006;
-        public static final int btAdicionarTarefa=0x7f080002;
-        public static final int btAtualizarTarefa=0x7f080005;
-        public static final int btRemoverProjeto=0x7f080004;
-        public static final int btVisualizarEquipe=0x7f080007;
-        public static final int tvTitulo=0x7f080001;
+        public static final int action_settings=0x7f08000c;
+        public static final int btAdicionarMembroEquipe=0x7f080007;
+        public static final int btAdicionarProjeto=0x7f08000a;
+        public static final int btAdicionarTarefa=0x7f080006;
+        public static final int btAtualizarTarefa=0x7f080009;
+        public static final int btLogar=0x7f080005;
+        public static final int btRemoverProjeto=0x7f080008;
+        public static final int btVisualizarEquipe=0x7f08000b;
+        public static final int etLogin=0x7f080001;
+        public static final int etPassword=0x7f080004;
+        public static final int tvLogin=0x7f080002;
+        public static final int tvPassword=0x7f080003;
     }
     public static final class layout {
-        public static final int adicionar_tarefa=0x7f030000;
-        public static final int adicionar_tarefaa=0x7f030001;
-        public static final int principal_activity=0x7f030002;
+        public static final int adicionar_membro=0x7f030000;
+        public static final int adicionar_projeto=0x7f030001;
+        public static final int adicionar_tarefa=0x7f030002;
+        public static final int atualizar_tarefa=0x7f030003;
+        public static final int login=0x7f030004;
+        public static final int principal_activity=0x7f030005;
+        public static final int remover_projeto=0x7f030006;
+        public static final int visualizar_equipe=0x7f030007;
     }
     public static final class menu {
-        public static final int adicionar_tarefa=0x7f070000;
-        public static final int adicionar_tarefa_activity=0x7f070001;
-        public static final int main=0x7f070002;
-        public static final int minha=0x7f070003;
+        public static final int adicionar_membro_activity=0x7f070000;
+        public static final int adicionar_projeto_activity=0x7f070001;
+        public static final int adicionar_tarefa=0x7f070002;
+        public static final int adicionar_tarefa_activity=0x7f070003;
+        public static final int atualizar_tarefa_activity=0x7f070004;
+        public static final int main=0x7f070005;
+        public static final int minha=0x7f070006;
+        public static final int remover_projeto_activity=0x7f070007;
+        public static final int visualizar_equipe_activity=0x7f070008;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
@@ -53,8 +67,14 @@ public final class R {
         public static final int login=0x7f050003;
         public static final int senha=0x7f050004;
         public static final int texto=0x7f050002;
+        public static final int title_activity_adicionar_membro_activity=0x7f05000e;
+        public static final int title_activity_adicionar_projeto_activity=0x7f05000a;
         public static final int title_activity_adicionar_tarefa=0x7f050008;
         public static final int title_activity_adicionar_tarefa_activity=0x7f050006;
+        public static final int title_activity_atualizar_tarefa_activity=0x7f05000d;
+        public static final int title_activity_main=0x7f05000c;
+        public static final int title_activity_remover_projeto_activity=0x7f05000b;
+        public static final int title_activity_visualizar_equipe_activity=0x7f050009;
     }
     public static final class style {
         /** 

@@ -19,7 +19,7 @@ public class MudarDeActivity implements OnClickListener
 	@Override
 	public void onClick( View v )
 	{
-		Intent myIntent = new Intent( v.getContext(), this.novaActivity.getClass());  
+		Intent myIntent = new Intent( v.getContext(), this.novaActivity.getClass() );  
         this.oldActivity.startActivity( myIntent );        
 	}
 }
