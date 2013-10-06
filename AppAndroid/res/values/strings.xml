@@ -3,8 +3,18 @@
 
     <string name="app_name">Gerência de Equipes</string>
     <string name="action_settings">Opções</string>
-    <string name="texto">Alterando app 13:35</string>
-	<string name="login">Login:</string>
-	<string name="senha">Senha:</string>
-	<string name="entrar">Entrar</string>
+    <string name="texto">Login</string>
+    <string name="login">Login:</string>
+    <string name="senha">Senha:</string>
+    <string name="entrar">Entrar</string>
+    <string name="title_activity_adicionar_tarefa_activity">Adicionar Tarefa Equipe</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_adicionar_tarefa">Adicionar Tarefa Equipe</string>
+    <string name="title_activity_visualizar_equipe_activity">Visualizar Minha Equipe</string>
+    <string name="title_activity_adicionar_projeto_activity">Adicionar Projeto à Equipe</string>
+    <string name="title_activity_remover_projeto_activity">Remover da Projeto</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_atualizar_tarefa_activity">Atualizar Tarefa da Equipe</string>
+    <string name="title_activity_adicionar_membro_activity">Adicionar à Equipe Membro</string>
+
 </resources>
