@@ -2,8 +2,13 @@ package Controle;
 
 import java.util.HashMap;
 
+import org.json.JSONObject;
+
+import Controle.acoes.Analyzer;
+import Controle.acoes.IAcao;
 import Modelo.Equipe;
 import Modelo.Usuario;
+import Modelo.sessao.ISessaoEquipe;
 
 public class Controle {
 
@@ -11,52 +16,17 @@ public class Controle {
 	 * @param args
 	 */
 		
-		private IBaseDeDados dados;
-		private HashMap<String, Usuario> usuarios;
-		private HashMap<String, Equipe> equipes;
-		
+//		private IBaseDeDados dados;
+//		private HashMap<String, Usuario> usuarios;
+//		private HashMap<String, Equipe> equipes;
+		ISessaoEquipe sessao;
 		public Controle(){
-			dados = new DadosGambiarrrra();
-			usuarios = dados.listaDeUsuarios();
-			equipes = dados.listaDeEquipes();
+//			dados = new DadosGambiarrrra();
+//			usuarios = dados.listaDeUsuarios();
+//			equipes = dados.listaDeEquipes();
 		}
-		
-		// \/ ignorem eh soh um esboço...
-		public void adicionarProjeto(String nome){
-			
+		public JSONObject chamada(JSONObject packet, Analyzer analyzer){
+			IAcao acao = analyzer.parsePacket(packet);
+			return acao.executar(packet,sessao);//passsar o controle ao invez de sessao
 		}
-		public void removerProjeto(String nome){
-			
-		}
-		public void criarTarefa(InfoTarefa info){
-			
-		}
-		public void atualizarTarefa(Tarefa tarefa, InfoTarefa info){
-			
-		}
-		public void adicionarMembro(String login){
-			
-		}
-		public void removerMembro(String login){
-			
-		}
-		public void modificarNivel(String nivel, String login){
-			
-		}
-		public void efetuarLogin(String login, String senha){
-			
-		}
-		public void desconectar(){
-			
-		}
-		public void listarArquivos(){
-			
-		}
-		public void vizualizarArquivo(String titulo){
-			
-		}
-		public void modificarArquivo(InfoArquivo info){
-			
-		}
-
 }

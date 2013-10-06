@@ -1,47 +1,19 @@
-import java.util.HashMap;
-
-import Controle.DadosGambiarrrra;
-import Controle.IBaseDeDados;
-import Modelo.Equipe;
-import Modelo.Usuario;
-
-
-
-//public class Main {
-//
-//	/**
-//	 * @param args
-//	 */
-//	public static void main(String[] args) {
-//		IBaseDeDados dados = new DadosGambiarrrra();
-//		HashMap<String, Usuario> usuarios = dados.listaDeUsuarios();
-//		HashMap<String, Equipe> equipes = dados.listaDeEquipes();
-//		// TODO Auto-generated method stub
-//
-//	}
-
 	import java.io.PrintWriter;
-	import java.net.ServerSocket;
-	import java.net.Socket;
-	import java.util.HashMap;
-	import java.util.Map;
-	import java.util.Scanner;
-	import org.json.JSONObject;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Scanner;
+import org.json.JSONObject;
 
-	import Controle.Analyzer;
-	import Controle.DadosGambiarrrra;
-	import Controle.IBaseDeDados;
-	import Modelo.Equipe;
-	import Modelo.Usuario;
-	import Controle.Controle;
+import sun.security.krb5.internal.ccache.CCacheInputStream;
+
+import Controle.Controle;
+import Controle.acoes.Analyzer;
 
 	public class Main {
-		Controle control;
 		Analyzer analyzer;
 		
 		public Main(){
-			control = new Controle();
-			analyzer = new Analyzer(control);
+			analyzer = new Analyzer();
 			
 			ServerSocket server;
 			try{
@@ -57,11 +29,13 @@ import Modelo.Usuario;
 			
 			Scanner leitor;
 			PrintWriter p;
+			Controle controleDaSessao;
 			
 			public EscutaCliente(Socket socket){
 				try {
 					leitor = new Scanner(socket.getInputStream());
 					p = new PrintWriter(socket.getOutputStream());
+					new Controle();
 				} catch (Exception e) {}
 			}
 			
@@ -71,7 +45,7 @@ import Modelo.Usuario;
 					JSONObject packet;
 					while((texto = leitor.nextLine()) != null){
 						try {
-							packet = analyzer.parsePacket(new JSONObject(texto));
+							packet = controleDaSessao.chamada(new JSONObject(texto),analyzer);
 							
 							p.println(packet.toString());
 							p.flush();
@@ -85,6 +59,3 @@ import Modelo.Usuario;
 			new Main();
 		}
 	}
-
-	
-}
