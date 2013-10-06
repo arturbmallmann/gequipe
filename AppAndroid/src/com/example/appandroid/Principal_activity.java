@@ -31,7 +31,6 @@ public class Principal_activity extends Activity
 				}
 				else
 				{	
-					
 					new AlertMessageSimples( activityCurrent, "LOGIN", "USUÁIO/SENHA INCORRETO");					
 				}
 			}
