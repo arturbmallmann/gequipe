@@ -86,6 +86,8 @@ public class Analyzer {
 	}
 	
 	private String wrap(String txt){
-		return txt.substring(1, txt.length()-1);
+		if(txt.startsWith("\""))
+			return txt.substring(1, txt.length()-1);
+		return txt;
 	}
 }
