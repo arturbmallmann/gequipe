@@ -21,7 +21,4 @@ public class Usuario {
 	public boolean conferirSenha(String senha){
 		return this.senha==senha;
 	}
-	public void setSessao(ISessaoEquipe sessao) {
-		this.sessao = sessao;
-	}
 }
