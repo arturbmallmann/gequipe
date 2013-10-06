@@ -40,6 +40,11 @@ public class Principal_activity extends Activity
 	
 	private void criaInterfaceUsuario()
 	{
+		/*
+		 * Apos termos como saber se ele é admin ou não. Tens que dvidir os layout, em layout para
+		 * user normal e user admin
+		 */
+		
 		setContentView( R.layout.principal_activity );
 
 		/**
