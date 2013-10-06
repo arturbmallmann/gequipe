@@ -1,4 +1,7 @@
 package com.example.appandroid;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import Controle.MudarDeActivity;
 import android.app.Activity;
 import android.os.Bundle;
@@ -17,6 +20,33 @@ public class Principal_activity extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.login);
 		
+		/**JSON COM USUARIO E SENHA**/
+		
+		JSONObject login = new JSONObject();
+		JSONObject password = new JSONObject();
+		
+		JSONArray infoLogin = new JSONArray();
+		
+		infoLogin.put( login );
+		infoLogin.put( password );
+		
+		try
+		{
+			login.put( "login", "admin" );
+			password.put( "password", "admin" );
+			
+			/*
+			 * não sei quebrar o JSON ARRAY kk se alguem saber..
+			 */
+			
+		}
+		catch( Exception e )
+		{
+			new AlertMessageSimples( activityCurrent , "ERRO", "erro json login/senha" );
+		}
+		
+		/****JSN COM USUARIO E SENHA****/
+		
 		Button btLogar = ( Button )findViewById( R.id.btLogar );
 		btLogar.setOnClickListener( new OnClickListener( )
 		{
@@ -30,7 +60,7 @@ public class Principal_activity extends Activity
 					criaInterfaceUsuario();
 				}
 				else
-				{	
+				{						
 					new AlertMessageSimples( activityCurrent, "LOGIN", "USUÁIO/SENHA INCORRETO");					
 				}
 			}
@@ -41,7 +71,7 @@ public class Principal_activity extends Activity
 	{
 		/*
 		 * Apos termos como saber se ele é admin ou não. Tens que dvidir os layout, em layout para
-		 * user normal e user admin
+		 * user normal, e user admin
 		 */
 		
 		setContentView( R.layout.principal_activity );
