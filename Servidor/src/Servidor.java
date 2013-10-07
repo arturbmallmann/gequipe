@@ -22,7 +22,7 @@ public class Servidor {
 	
 	public Servidor(){
 		ServerSocket server;
-		contas = new HashMap<>();
+		contas = new HashMap<String, String>();
 		try{
 			server = new ServerSocket(5000);
 			while(true){

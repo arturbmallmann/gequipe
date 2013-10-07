@@ -1,5 +1,9 @@
 package org.json;
 
+import org.json.JSONException;
+import org.json.JSONTokener;
+import org.json.XML;
+
 /*
 Copyright (c) 2002 JSON.org
 

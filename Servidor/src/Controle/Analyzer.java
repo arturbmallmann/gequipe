@@ -3,8 +3,6 @@ import java.util.HashMap;
 
 import org.json.JSONObject;
 
-import com.sun.org.apache.regexp.internal.RE;
-
 import Controle.acoes.AdicionarProjeto;
 import Controle.acoes.AdicionarTarefa;
 import Controle.acoes.IAcao;
