@@ -1,19 +1,23 @@
 package Controle;
 
-import java.util.HashMap;
+import org.json.JSONObject;
 
-import Modelo.Equipe;
-import Modelo.Usuario;
+import Controle.acoes.IAcao;
+import Modelo.sessao.ISessaoEquipe;
 
 public class Controle {
 
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
-		IBaseDeDados dados = new DadosGambiarrrra();
-		HashMap<String, Usuario> usuarios = dados.listaDeUsuarios();
-		HashMap<String, Equipe> equipes = dados.listaDeEquipes();
-	}
-
+		
+		public IBaseDeDados dados;
+		public ISessaoEquipe sessao;
+		public Controle(IBaseDeDados dados){
+			this.dados = dados;
+		}
+		public JSONObject chamada(JSONObject packet, Analyzer analyzer){
+			IAcao acao = analyzer.parsePacket(packet);
+			return acao.executar(packet,this);//passsar o controle ao invez de sessao
+		}
 }
