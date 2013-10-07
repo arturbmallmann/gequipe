@@ -4,13 +4,14 @@ import java.net.Socket;
 import java.util.Scanner;
 import org.json.JSONObject;
 
-import sun.security.krb5.internal.ccache.CCacheInputStream;
-
+import Controle.Analyzer;
 import Controle.Controle;
-import Controle.acoes.Analyzer;
+import Controle.DadosGambiarrrra;
+import Controle.IBaseDeDados;
 
 	public class Main {
 		Analyzer analyzer;
+		IBaseDeDados dados = new DadosGambiarrrra();
 		
 		public Main(){
 			analyzer = new Analyzer();
@@ -35,7 +36,7 @@ import Controle.acoes.Analyzer;
 				try {
 					leitor = new Scanner(socket.getInputStream());
 					p = new PrintWriter(socket.getOutputStream());
-					new Controle();
+					new Controle(dados);
 				} catch (Exception e) {}
 			}
 			

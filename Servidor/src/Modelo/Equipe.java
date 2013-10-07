@@ -19,8 +19,8 @@ public class Equipe {
 		return arq.Visualizar();
 	}
 
-	public void ModificarArquivo(InfoArquivo info) {
-		Arquivo arq = arquivos.get(info.getNome());
+	public void ModificarArquivo(String nome,InfoArquivo info) {
+		Arquivo arq = arquivos.get(nome);
 		arq.Modificar(info);
 	}
 
@@ -60,6 +60,10 @@ public class Equipe {
 			projetos.remove(nome);
 		else
 			throw new Exception("projeto não existe");		
+	}
+	
+	public boolean isMember(Usuario usuario){
+		return membros.containsKey(usuario);
 	}
 	
 	public String getNome() {

@@ -1,93 +1,46 @@
 package Controle;
+import java.util.HashMap;
+
 import org.json.JSONObject;
 
+import Controle.acoes.IAcao;
+import Controle.acoes.Login;
+
 public class Analyzer {
-	
-	private Controle control;
-	
-	public Analyzer(Controle control){
-		this.control = control;
+	HashMap<String, IAcao> mapaDeAcoes;
+	public Analyzer(){
+		mapaDeAcoes=new HashMap<String, IAcao>();
+		mapaDeAcoes.put("login", new Login());
 	}
 	
-	public JSONObject parsePacket(JSONObject packet){
+	public IAcao parsePacket(JSONObject packet){
 		if(packet.has("login") && packet.has("senha")){
-			return efetuarLogin(packet);
+			return mapaDeAcoes.get("login");
 		}else if(packet.has("addProj")){
-			return adicionarProjeto(packet);
+			return mapaDeAcoes.get("addProj");
 		}else if(packet.has("removeProj")){
-			return removerProjeto(packet);
+			return mapaDeAcoes.get("removeProj");
 		}else if(packet.has("newTarefa")){
-			return criarTarefa(packet);
+			return mapaDeAcoes.get("newTarefa");
 		}else if(packet.has("updateTarefa")){
-			return atualizarTarefa(packet);
+			return mapaDeAcoes.get("updateTarefa");
 		}else if(packet.has("addMembro")){
-			return adicionarMembro(packet);
+			return mapaDeAcoes.get("addMembro");
 		}else if(packet.has("removeMembro")){
-			return removerMembro(packet);
+			return mapaDeAcoes.get("removeMembro");
 		}else if(packet.has("changeNivel")){
-			return modificarNivel(packet);
+			return mapaDeAcoes.get("changeNivel");
 		}else if(packet.has("desconectar")){
-			return desconectar(packet);
+			return mapaDeAcoes.get("desconectar");
 		}else if(packet.has("listArquivos")){
-			return listarArquivos(packet);
+			return mapaDeAcoes.get("listArquivos");
 		}else if(packet.has("viewArquivo")){
-			return visualizarArquivo(packet);
+			return mapaDeAcoes.get("viewArquivo");
 		}else if(packet.has("changeArquivo")){
-			return modificarArquivo(packet);
+			return mapaDeAcoes.get("changeArquivo");
 		}
 		return null;
 	}
 	
-	public JSONObject efetuarLogin(JSONObject packet){
-		String login = wrap(packet.get("login").toString());
-		String senha = wrap(packet.get("senha").toString());
-		packet = new JSONObject();
-		
-		try{
-			control.efetuarLogin(login, senha);
-			packet.put("message", "Login efetuado com sucesso!");
-		}catch(Exception e){
-			packet.put("message", e.getMessage());
-		}
-		return packet;
-	}
-	public JSONObject adicionarProjeto(JSONObject packet){
-		return null;
-	}
-	public JSONObject removerProjeto(JSONObject packet){
-		return null;
-	}
-	public JSONObject criarTarefa(JSONObject packet){
-		return null;
-	}
-	public JSONObject atualizarTarefa(JSONObject packet){
-		return null;
-	}
-	public JSONObject adicionarMembro(JSONObject packet){
-		return null;
-	}
-	public JSONObject removerMembro(JSONObject packet){
-		return null;
-	}
-	public JSONObject modificarNivel(JSONObject packet){
-		return null;
-	}
-	public JSONObject desconectar(JSONObject packet){
-		return null;
-	}
-	public JSONObject listarArquivos(JSONObject packet){
-		return null;
-	}
-	public JSONObject visualizarArquivo(JSONObject packet){
-		return null;
-	}
-	public JSONObject modificarArquivo(JSONObject packet){
-		return null;
-	}
-	
-	private String wrap(String txt){
-		if(txt.startsWith("\""))
-			return txt.substring(1, txt.length()-1);
-		return txt;
-	}
+
 }

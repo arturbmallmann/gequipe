@@ -2,8 +2,8 @@ package Controle.acoes;
 
 import org.json.JSONObject;
 
-import Modelo.sessao.ISessaoEquipe;
+import Controle.Controle;
 
 public interface IAcao {
-	public JSONObject executar(JSONObject packet,ISessaoEquipe sessao);
+	public JSONObject executar(JSONObject packet,Controle controle);
 }

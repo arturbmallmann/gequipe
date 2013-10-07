@@ -1,11 +1,10 @@
 package Controle;
 
-import java.util.HashMap;
-
-import Modelo.Equipe;
 import Modelo.Usuario;
+import Modelo.sessao.ISessaoEquipe;
 
 public interface IBaseDeDados {
-	public HashMap<String, Usuario> listaDeUsuarios();
-	public HashMap<String, Equipe> listaDeEquipes();
+	public Usuario pegaUsuarios(String nome);
+	public ISessaoEquipe criarSessao(Usuario usuario);
+	public void setarNivel(Usuario usuario,Integer valor);
 }
