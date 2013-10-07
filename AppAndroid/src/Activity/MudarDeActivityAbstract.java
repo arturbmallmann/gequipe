@@ -1,16 +1,16 @@
-package Controle;
+package Activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-public class MudarDeActivity implements OnClickListener
+public abstract class MudarDeActivityAbstract implements OnClickListener
 {
-	private Activity novaActivity;
-	private Activity oldActivity;
+	protected Activity novaActivity;
+	protected Activity oldActivity;
 	
-	public MudarDeActivity( Activity novaActivity, Activity oldActivity )
+	public MudarDeActivityAbstract( Activity novaActivity, Activity oldActivity )
 	{
 		this.novaActivity = novaActivity;
 		this.oldActivity = oldActivity;
@@ -20,6 +20,6 @@ public class MudarDeActivity implements OnClickListener
 	public void onClick( View v )
 	{
 		Intent myIntent = new Intent( v.getContext(), this.novaActivity.getClass() );  
-        this.oldActivity.startActivity( myIntent );        
+        this.oldActivity.startActivity( myIntent ); 
 	}
 }

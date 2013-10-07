@@ -24,21 +24,23 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int Titulo=0x7f080001;
-        public static final int btAdicionarProjeto=0x7f08000c;
-        public static final int btAdicionarTarefa=0x7f080008;
-        public static final int btAtualizarTarefa=0x7f08000b;
-        public static final int btLogar=0x7f080007;
-        public static final int btRemoverProjeto=0x7f08000a;
-        public static final int btVisualizarEquipe=0x7f08000d;
+        public static final int Titulo=0x7f080002;
+        public static final int btAdicionarMembro=0x7f08000a;
+        public static final int btAdicionarProjeto=0x7f08000d;
+        public static final int btAdicionarTarefa=0x7f080009;
+        public static final int btAtualizarTarefa=0x7f08000c;
+        public static final int btLogar=0x7f080008;
+        public static final int btPesquisarMembro=0x7f080001;
+        public static final int btRemoverProjeto=0x7f08000b;
+        public static final int btVisualizarEquipe=0x7f08000f;
         public static final int etAddMembro=0x7f080000;
-        public static final int etLogin=0x7f080003;
-        public static final int etLoginUserAddMembro=0x7f080009;
-        public static final int etPassword=0x7f080006;
-        public static final int tvLogin=0x7f080004;
-        public static final int tvLoginUser=0x7f08000e;
-        public static final int tvPassword=0x7f080005;
-        public static final int tvTitulo=0x7f080002;
+        public static final int etLogin=0x7f080004;
+        public static final int etLoginUserAddMembro=0x7f08000e;
+        public static final int etPassword=0x7f080007;
+        public static final int tvLogin=0x7f080005;
+        public static final int tvLoginUser=0x7f080010;
+        public static final int tvPassword=0x7f080006;
+        public static final int tvTitulo=0x7f080003;
     }
     public static final class layout {
         public static final int adicionar_membro=0x7f030000;

@@ -1,5 +1,6 @@
 package Controle;
 import org.json.JSONArray;
+import org.json.JSONObject;
 public class Controle
 {
 	private JSONArray retorno;
@@ -12,6 +13,35 @@ public class Controle
 
 	public void adicionarMembro( JSONArray j )
 	{
+		
+		try
+		{
+			JSONArray retorno = new JSONArray();
+			
+			JSONArray listaM = new JSONArray();
+			JSONObject um = new JSONObject();
+			JSONObject dois = new JSONObject();
+			JSONObject membre = new JSONObject();
+			membre.put( "membro" , listaM );
+			listaM.put(um);
+			listaM.put(dois);
+			um.put("nome", "Luiz");
+			dois.put( "nome", "ele" );
+			JSONArray menssagems = new JSONArray();
+			JSONObject exception = new JSONObject();
+			exception.put("exception", false);
+			JSONObject Oretorno = new JSONObject();
+			Oretorno.put("retorno","listadeMembro");
+			menssagems.put(exception);
+			menssagems.put(Oretorno);
+			retorno.put(membre);
+			retorno.put(menssagems);
+			this.retorno = retorno;
+		}
+		catch( Exception e )
+		{
+
+		}
 		/*
 		 * AQUI MANDA O JSON PARA O SERVIDOR VIA SOCKET
 		 * o retorno vai estar sempre no toString, voltando string obvio, mas podemos voltar a string e interpretala, ou voltar o JSONArray
