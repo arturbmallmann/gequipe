@@ -18,7 +18,7 @@
         android:text="Adicionar Tarefa" />
 
     <Button
-        android:id="@+id/btAdicionarMembroEquipe"
+        android:id="@+id/etLoginUserAddMembro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/btRemoverProjeto"
@@ -48,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/btRemoverProjeto"
-        android:layout_alignRight="@+id/btAdicionarMembroEquipe"
+        android:layout_alignRight="@+id/etLoginUserAddMembro"
         android:layout_marginBottom="16dp"
         android:text="Adicionar Projeto" />
 

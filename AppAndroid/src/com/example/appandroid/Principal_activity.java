@@ -2,6 +2,7 @@ package com.example.appandroid;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import Controle.Controle;
 import Controle.MudarDeActivity;
 import android.app.Activity;
 import android.os.Bundle;
@@ -13,6 +14,12 @@ import android.widget.EditText;
 public class Principal_activity extends Activity
 {	
 	private Activity activityCurrent = this;
+	private Controle conexaoServidor;
+	
+	public Principal_activity()
+	{
+		conexaoServidor = new Controle();
+	}
 	
 	@Override
 	protected void onCreate( Bundle savedInstanceState )
@@ -42,7 +49,7 @@ public class Principal_activity extends Activity
 		}
 		catch( Exception e )
 		{
-			new AlertMessageSimples( activityCurrent , "ERRO", "erro json login/senha" );
+			System.out.println( "ERRO JSON" );
 		}
 		
 		/****JSN COM USUARIO E SENHA****/
@@ -88,7 +95,7 @@ public class Principal_activity extends Activity
 		 Muda activity para adicionar membro
 		 */
 
-		Button btAdicionarMembro = ( Button ) findViewById( R.id.btAdicionarMembroEquipe );
+		Button btAdicionarMembro = ( Button ) findViewById( R.id.etLoginUserAddMembro );
 		Activity adicionarMembroEquipe = new AdicionarMembro_activity();
 		btAdicionarMembro.setOnClickListener( new MudarDeActivity( adicionarMembroEquipe, this));
 		
