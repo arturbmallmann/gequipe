@@ -36,7 +36,7 @@ import Controle.IBaseDeDados;
 				try {
 					leitor = new Scanner(socket.getInputStream());
 					p = new PrintWriter(socket.getOutputStream());
-					new Controle(dados);
+					controleDaSessao = new Controle(dados);
 				} catch (Exception e) {}
 			}
 			

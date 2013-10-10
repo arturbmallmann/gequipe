@@ -17,9 +17,11 @@ public class Login extends AcaoWrap {
 			if (usuario.conferirSenha(senha)) {
 				controle.sessao = controle.dados.criarSessao(usuario);
 				packet.put("message", "Login efetuado com sucesso!");
+			}else{
+				packet.put("erro", "Senha Incorreta");
 			}
 		} catch (Exception e) {
-			packet.put("message", e.getMessage());
+			packet.put("erro", e.getMessage());
 		}
 		return packet;
 	}

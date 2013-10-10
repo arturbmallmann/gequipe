@@ -11,12 +11,4 @@ public class AtualizarTarefa_activity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.atualizar_tarefa);
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.atualizar_tarefa_activity, menu);
-		return true;
-	}
-
 }

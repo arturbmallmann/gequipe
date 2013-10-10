@@ -10,7 +10,6 @@ import javax.swing.JTextField;
 public class ModificalNivel extends JPanel{
 	public ModificalNivel() {
 
-
 		setLayout(null);
 		
 		JLabel lblModificarNivel = new JLabel("Modificar Nivel:");
@@ -31,7 +30,7 @@ public class ModificalNivel extends JPanel{
 		add(textField_2);
 		textField_2.setColumns(10);
 		
-		JComboBox<String> comboBox = new JComboBox<String>();
+		JComboBox comboBox = new JComboBox();
 		comboBox.addItem("0 - ADM");
 		comboBox.addItem("1 - Normal");
 		comboBox.setBounds(59, 73, 128, 20);

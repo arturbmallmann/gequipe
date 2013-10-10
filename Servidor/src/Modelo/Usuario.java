@@ -16,6 +16,6 @@ public class Usuario {
 		return nome;
 	}
 	public boolean conferirSenha(String senha){
-		return this.senha==senha;
+		return this.senha.equals(senha);
 	}
 }

@@ -12,11 +12,4 @@ public class AdicionarProjeto_activity extends Activity {
 		setContentView(R.layout.adicionar_projeto);
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.adicionar_projeto_activity, menu);
-		return true;
-	}
-
 }
